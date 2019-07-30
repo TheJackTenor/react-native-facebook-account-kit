@@ -239,8 +239,9 @@ public class RNAccountKitModule extends ReactContextBaseJavaModule implements Ac
             configurationBuilder.setReadPhoneStateEnabled(readPhoneStateEnabled);
         }
 
-        boolean receiveSMS = this.options.getBoolean("receiveSMS");
-        configurationBuilder.setEnableInitialSmsButton(receiveSMS);
+        // DISABLE THIS TO PREVENT METHOD NOT FOUND ERROR
+        // boolean receiveSMS = this.options.getBoolean("receiveSMS");
+        // configurationBuilder.setEnableInitialSmsButton(receiveSMS);
 
         if (this.options.hasKey("countryBlacklist")) {
             String[] blacklist = formatCountryList(this.options.getArray("countryBlacklist"));
